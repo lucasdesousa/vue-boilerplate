@@ -1,21 +1,25 @@
 <template>
-  <div class="home">
-    <Header />
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="home text-center">
+    <HelloWorld :msg="$t('message')" />
   </div>
 </template>
+
+<style scoped>
+.home {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+</style>
 
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
-import Header from "@/components/ui/Header.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld,
-    Header
+    HelloWorld
   }
 };
 </script>

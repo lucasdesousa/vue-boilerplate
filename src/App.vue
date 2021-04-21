@@ -1,41 +1,23 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <Header />
+  <Navbar />
   <router-view />
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
-
 <script>
+import Header from "@/components/ui/Header";
+import Navbar from "@/components/ui/Navbar";
+
 import {
   setDocumentDirectionPerLocale,
   setDocumentLang
 } from "./translations/helpers";
 
 export default {
+  components: {
+    Header,
+    Navbar
+  },
   mounted() {
     this.$watch(
       "$i18n.locale",

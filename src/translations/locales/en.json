@@ -1,3 +1,7 @@
 {
+  "navbar": {
+    "home": "Home",
+    "about": "About"
+  },
   "message": "hello i18n !!"
 }

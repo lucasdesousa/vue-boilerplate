@@ -1,3 +1,7 @@
 {
-    "message": "oi i18n !!"
-  }
+  "navbar": {
+    "home": "Início",
+    "about": "Sobre"
+  },
+  "message": "oi i18n !!"
+}
